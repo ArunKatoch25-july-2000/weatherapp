@@ -1,0 +1,64 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="Images/favicon.png" type="image/png" />
+
+  </head>
+  <body>
+    <!-- ---Heder Section with Logo, Navigation Links, menu-btn => (for small devices) ---  -->
+
+    {{>header}}
+
+    <!-- Body starts from here  -->
+    <main class="main_body">
+      <div class="left_body">
+        <span class="upper-heading">Welcome to ak weather app</span>
+        <h1 class="middle_heading">Get The Latest
+          <span class="blue_span">Weather</span>
+          Info Of Your City</h1>
+        <button class="check_btn"> <a href="weather">check now</a> </button>
+      </div>
+
+      <!-- <div class="right_body"> -->
+      <div class="slideshow_container">
+        <div class="slideshows"><img
+            src="Images/season_change.png"
+            alt="#"
+          /></div>
+        <div class="slideshows"><img
+            src="Images/weather_notification.png"
+            alt="#"
+          /></div>
+        <div class="slideshows"><img
+            src="Images/weather_app.png"
+            alt="#"
+          /></div>
+      </div>
+      <!-- </div> -->
+
+    </main>
+    {{>footer}}
+
+    <script src="js/main.js"></script>
+    <script>
+      let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slideshows");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+    </script>
+  </body>
+</html>

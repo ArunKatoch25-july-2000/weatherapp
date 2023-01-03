@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="Images/favicon.png" type="image/png" />
+
+  </head>
+  <body>
+    <!-- ---Heder Section with Logo, Navigation Links, menu-btn => (for small devices) ---  -->
+
+    {{>header}}
+
+    <!-- Body starts from here  -->
+    <main class="wether_outer_div">
+
+       {{!-- Search City  --}}
+  <form class="outer_search_div">
+    <input type="text" id="search_text" placeholder="Enter your city name">
+    <button id="submit_btn" type="submit">search</button>
+  </form>
+
+ {{!-- Weather Output  --}}
+  <div class="weather_display">
+    <div class="day_date">
+      <p id="curr_date"></p>
+      <p id="curr_day"></p>
+    </div>
+    <div class="output_container">
+      <p id="weather_output_city">Get Output Here</p>
+      {{!-- data_hide classput below: --}}
+      <div class="weather_output">
+        <h1> <span id="degree">0</span> <sup>&#176;</sup><span>C</span></h1>
+         <img src="https://img.icons8.com/emoji/48/null/sun-emoji.png" alt="sunnyday" id="temp_status"/>
+
+      </div>
+
+    </div>
+  </div>
+</main>
+ {{>footer}}
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

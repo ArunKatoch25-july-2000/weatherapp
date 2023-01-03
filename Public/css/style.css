@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+#header {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0.1rem solid black;
+  background-color: rgb(24, 36, 71);
+}
+
+/* -------------------------------  Logo Portion ---------------------- */
+#logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#logo span {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  color: white;
+}
+#logo #snowflake {
+  width: 2.5rem;
+  margin: 0 1rem;
+}
+
+/* ------------------------------ Navbar portion ----------------------------- */
+#navbar {
+  margin-right: 3rem;
+}
+#navbar #nav-lists {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+#nav-lists .links {
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+#nav-lists .links:hover {
+  color: blanchedalmond;
+}
+#menu-btn {
+  font-size: 2.5rem;
+  color: white;
+  display: none;
+}
+
+#menu-btn:hover {
+  color: bisque;
+}
+#small-devices {
+  background-color: rgba(0, 0, 0, 0.873);
+  width: 40vw;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 0;
+  height: 40vh;
+  transition: 2s;
+  z-index: 1;
+}
+
+#close-btn {
+  font-size: 4.5rem;
+  color: black;
+  font-weight: 100;
+  color: white;
+  position: absolute;
+  top: 2.5rem;
+  right: 8%;
+}
+
+#small-navbar #small-nav-lists {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+#small-nav-lists li {
+  padding: 0.5rem;
+}
+
+#small-nav-lists .links {
+  color: white;
+  font-size: 2rem;
+}
+
+/* Body section starts  */
+.main_body {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  /* border: .1rem solid black; */
+}
+
+.left_body {
+  width: 60vw;
+  height: 40%;
+  display: flex;
+  align-items: left;
+  padding: 0 0 0 8rem;
+  justify-content: center;
+  flex-direction: column;
+  /* border: .1rem solid blue; */
+}
+.upper-heading {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+.middle_heading {
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+  padding: 1.2rem 0;
+}
+.blue_span {
+  color: rgb(5, 192, 255);
+}
+.check_btn {
+  width: 8rem;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0.3rem 0.3rem rgba(0, 0, 0, 0.335);
+  background-color: rgb(5, 192, 255);
+  padding: 0.5rem;
+}
+
+.check_btn a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.check_btn a:hover {
+  color: white;
+}
+/* +-+-+-+-+-+-+-+-+-+-+-+-+- */
+
+.slideshow_container {
+  width: 30%;
+  height: 40%;
+  margin: 0 0 0rem 5rem;
+  /* border: .1rem solid palevioletred; */
+  position: relative;
+}
+#about_me_img {
+  width: 90%;
+  height: 100%;
+}
+.slideshow_container .slideshows {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.slideshow_container .slideshows img {
+  width: 100%;
+  height: 100%;
+}
+
+.errorPage {
+  width: 100%;
+  height: 90vh;
+}
+.errorPage img {
+  width: 100%;
+  height: 100%;
+}
+
+.contact_div {
+  width: 40rem;
+  padding: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20rem auto;
+  border: 0.1rem solid rgb(24, 36, 71);
+  background-color: rgba(246, 246, 246, 0.516);
+  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.485);
+}
+
+.contact_div h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  color: rgb(64, 64, 64);
+  padding: 1rem 0;
+}
+
+.contact_div span {
+  margin: 1rem 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(58, 58, 58);
+  letter-spacing: 0.1rem;
+}
+
+.contact_div .social_links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.contact_div .social_links img {
+  width: 3rem;
+  margin: 0 0.5rem;
+}
+
+/*                 +-+-+-+-+-+-+-  Weather app CSS  +-+-+-+-+-+-   */
+
+/* Search input designing  */
+.wether_outer_div {
+  width: 100%;
+  height: 90vh;
+  /* border-bottom: 0.1rem solid black; */
+  display: flex;
+  flex-direction: column;
+}
+.outer_search_div {
+  width: 50rem;
+  height: 4rem;
+  border-radius: 1rem;
+  background-color: rgb(24, 36, 71);
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.485);
+  padding: 0 0 0 0.5rem;
+  margin: 5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.outer_search_div #search_text {
+  width: 80%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0 0.5rem;
+  color: white;
+}
+
+::placeholder {
+  color: #fff;
+  letter-spacing: 0.1rem;
+}
+
+.outer_search_div #submit_btn {
+  height: 90%;
+  width: 18%;
+  font-size: 1.3rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: rgb(4, 137, 182);
+  border: none;
+  color: white;
+  letter-spacing: 0.1rem;
+}
+.outer_search_div #submit_btn:hover {
+  background-color: rgb(5, 128, 168);
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+}
+
+/* Weather Output designing  */
+.weather_display {
+  width: 38rem;
+  display: flex;
+  flex-direction: column;
+  /* border: 0.1rem solid black; */
+  margin: 6rem auto;
+  background-color: rgb(14, 28, 69);
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.485);
+  color: white;
+  font-size: 1.5rem;
+}
+
+.weather_display .day_date {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0.5rem;
+  background-color: rgb(8, 12, 26);
+  border-bottom: 0.1rem solid white;
+}
+
+.output_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* border: .1rem solid #fff; */
+  align-items: center;
+  justify-content: center;
+}
+
+.output_container #weather_output_city {
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  padding: 5rem 0;
+  font-size: 2rem;
+}
+
+.weather_output {
+  /* border: .1rem solid black; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2rem 0;
+}
+
+.data_hide {
+  visibility: hidden;
+}
+
+/* footer coding  */
+footer {
+  width: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  background-color: rgb(14, 28, 69);
+  bottom: 0;
+  color: white;
+}
+
+footer .footer_info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .footer_info .footer_span_1 {
+  font-size: 1.5rem;
+}
+footer .footer_info .footer_span_2 {
+  font-size: 1.3rem;
+}
+footer .footer_info .footer_span_3 {
+  font-size: 1rem;
+}
+
+/*                      +--+-+-+-+-+- Media Queries +--+-+-+-+-+-                        */
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 55.2%;
+  }
+  .slideshow_container {
+    height: 30%;
+    margin: 0 0 0rem 3rem;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 48.2%;
+  }
+  .slideshow_container {
+    margin: 0 0 0 1rem;
+  }
+  .left_body {
+    padding: 0 0 0 3rem;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 45.2%;
+  }
+  #navbar {
+    display: none;
+  }
+  #menu-btn {
+    display: inline-block;
+  }
+  #small-devices {
+    height: 30vh;
+    width: 50vw;
+    background-color: rgba(24, 36, 71);
+    top: 6rem;
+  }
+  #close-btn {
+    top: 0;
+  }
+  .main_body {
+    position: relative;
+  }
+  .left_body {
+    position: absolute;
+    top: 32%;
+    /* border: 0.1rem solid blue; */
+    width: 100%;
+  }
+  .slideshow_container {
+    /* border: 0.1rem solid black; */
+    width: 100%;
+    top: 0;
+    position: absolute;
+    margin: 0;
+  }
+  .outer_search_div{
+    border: .1rem solid white;
+    width: 95%;
+  
+  }
+  .weather_display, .contact_div{
+    width: 90%;
+  }
+  
+}
